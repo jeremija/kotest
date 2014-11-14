@@ -1,0 +1,37 @@
+{
+  "name": "ko-test",
+  "version": "0.0.0",
+  "authors": [
+    "jeremija <jerko.steiner@gmail.com>"
+  ],
+  "description": "Test Knockout 3.2 components and custom binding handlers with ease",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "knockout",
+    "knockout3",
+    "unit",
+    "test",
+    "testing"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockoutjs": "~3.2.0"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.1",
+    "mocha": "~2.0.1",
+    "expect": "~0.3.1",
+    "requirejs": "~2.1.15",
+    "requirejs-text": "~2.0.12"
+  }
+}

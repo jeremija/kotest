@@ -1,0 +1,20 @@
+{
+  "name": "ko-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "npm install && node test/findTests.js && jshint src/js/ test/js",
+    "test": "node node_modules/mocha-phantomjs/bin/mocha-phantomjs test/test.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jshint": "^2.5.10",
+    "mocha-phantomjs": "^3.5.1",
+    "phantomjs": "^1.9.12"
+  }
+}
