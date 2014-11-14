@@ -8,7 +8,8 @@
   },
   "scripts": {
     "pretest": "npm install && node test/findTests.js && jshint src/js/ test/js",
-    "test": "node node_modules/mocha-phantomjs/bin/mocha-phantomjs test/test.html"
+    "test": "node node_modules/mocha-phantomjs/bin/mocha-phantomjs test/test.html",
+    "postinstall": "bower install"
   },
   "author": "",
   "license": "ISC",
