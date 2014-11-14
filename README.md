@@ -4,8 +4,8 @@ Test Knockout 3.2 components and custom binding handlers with ease.
 
 #Dependencies
 
-- knockout
-- mocha
+- [knockout](http://knockoutjs.com)
+- [mochajs](http://mochajs.org)
 
 This library supports loading via AMD or as a global object, but mocha always
 needs to in the global scope. AFAIK it has no support for loading via an AMD
@@ -103,9 +103,9 @@ kotest().defineBinding('multiplier', multiplier)
 As with the previous example, you can omit the `defineBinding()` call if your
 custom binding handler is already set in `ko.bindingHandlers`.
 
-For more information clone the repository and view the examples inside the
-`test/js/` folder. The examples from this file can be found in the
-`test/js/readme-examples/` folder. All tests can be run with `npm test`. See
+For more information clone the repository and view the tests inside the
+[test/js/](test/js) folder. The examples from this file can be found in the
+[test/js/readme-examples/](test/js/readme-examples) folder. All tests can be run with `npm test`. See
 section `Cloning and running tests` below for more details.
 
 # Installing
@@ -128,7 +128,7 @@ npm install -g http-server
 http-server
 ```
 
-And then visit the http://localhost:8080/test/test.html page in your browser.
+And then visit the [http://localhost:8080/test/test.html](http://localhost:8080/test/test.html) page in your browser.
 
 # License
 
