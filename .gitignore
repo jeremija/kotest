@@ -1,2 +1,3 @@
 bower/
 node_modules/
+test/setup/tests.js
