@@ -54,9 +54,10 @@ kotest().defineComponent('login-component', {
     template: template
 }).component('login-component', params).test('my first test', function(ctx) {
     before(function() {
-        $(ctx.element).find('input[name=user]').val('john').change();
-        $(ctx.element).find('input[name=pass]').val('p455w0rd').change();
-        $(ctx.element).find('form').submit();
+        var $element = $(ctx.element);
+        $element.find('input[name=user]').val('john').change();
+        $element.find('input[name=pass]').val('p455w0rd').change();
+        $element.find('form').submit();
     });
     it('should have called params.onSubmit() with credentials', function() {
         expect(credentials).to.eql({
