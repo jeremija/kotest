@@ -121,7 +121,14 @@ git clone https://github.com/jeremija/kotest.git
 npm test
 ```
 
-This will also install all depenencies required for testing from the command line.
+This will also install all depenencies required for testing from the command line. You can also run these tests in browser. You will need to run HTTP server like `http-server` from the project's root directory:
+
+```
+npm install -g http-server
+http-server
+```
+
+And then visit the http://localhost:8080/test/test.html page in your browser.
 
 # License
 
