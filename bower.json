@@ -1,5 +1,5 @@
 {
-  "name": "ko-test",
+  "name": "kotest",
   "version": "0.0.0",
   "authors": [
     "jeremija <jerko.steiner@gmail.com>"
@@ -12,6 +12,7 @@
   "keywords": [
     "knockout",
     "knockout3",
+    "component",
     "unit",
     "test",
     "testing"
