@@ -104,7 +104,7 @@
             });
 
             if (async) {
-                it('wait for the component to load', function(done) {
+                before(function(done) {
                     setTimeout(function() {
                         // this needs to be async as knockout components are loaded
                         // asynchronously
@@ -112,7 +112,6 @@
                     });
                 });
             }
-
 
             if (tests) tests(context);
         });
