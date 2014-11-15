@@ -191,7 +191,7 @@ two properties:
 - `container` - element's container, same as `element.parentNode`.
 
 ### return value
-This element does not return anything
+This funcion does not return anything
 
 ### example
 Examples are available in [README](README.md);
