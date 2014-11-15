@@ -1,8 +1,8 @@
-#kotest
+# kotest
 
 Test Knockout 3.2 components and custom binding handlers with ease.
 
-#Dependencies
+# Dependencies
 
 - [knockout](http://knockoutjs.com)
 - [mochajs](http://mochajs.org)
@@ -77,7 +77,7 @@ in the dom to append the dynamically created elements for the test to. The
 default value of this argument is 'test', so you should an empty (div) element
 defined in your main test html file.
 
-## Testing binding handlers
+## Testing Binding Handlers
 Let's say you have a custom binding handler:
 ```javascript
 var multiplier = {
@@ -108,6 +108,9 @@ For more information clone the repository and view the tests inside the
 [test/js/](test/js) folder. The examples from this file can be found in the
 [test/js/readme-examples/](test/js/readme-examples) folder. All tests can be run with `npm test`. See
 section `Cloning and running tests` below for more details.
+
+# API Reference
+Available [here](API.md).
 
 # Installing
 
