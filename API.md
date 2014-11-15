@@ -3,6 +3,13 @@
 Kotest module exports a single function, named `kotest`. Read below to see the
 details.
 
+- [kotest(testContainerId)](#kotesttestcontainerid)
+- [kotest().defineComponent(name, config)](#kotestdefinecomponentname-config)
+- [kotest().defineBinding(name, handlerObject)](#kotestdefinebindingname-handlerobject)
+- [kotest().component(name, params, html)](#kotestcomponentname-params-html)
+- [kotest().binding(name, value, html)](#kotestbindingname-value-html)
+- [kotest()...test(name, callback)](#kotesttestname-callback)
+
 ## kotest(testContainerId)
 Prepares a new instance to configure the test with.
 
@@ -173,7 +180,7 @@ kotest().defineBinding('additive', additive)
     });
 ```
 
-## testStarter.test(name, callback)
+## kotest()...test(name, callback)
 
 ### arguments
 - `name` - name of the test
