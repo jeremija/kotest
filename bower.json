@@ -26,7 +26,8 @@
     "tests"
   ],
   "dependencies": {
-    "knockoutjs": "~3.2.0"
+    "knockoutjs": "~3.2.0",
+    "mocha": "~2.0.1"
   },
   "devDependencies": {
     "jquery": "~2.1.1",
