@@ -71,7 +71,9 @@ kotest().defineBinding('myBinding', handler)
 ```
 
 ## kotest().component(name, params, html)
-Prepares the test configuration to test a component.
+Prepares the test configuration to test a component. As the components are
+loaded asynchronously, it a `setTimeout()` is called and the rest of the
+code will be executed after that call finishes.
 
 ### arguments
 - `name` - name of the component to test
