@@ -39,15 +39,35 @@
             element.setAttribute('data-bind', 'component: value');
             return {
                 element: element,
-                value: testConfigParams,
+                vm: {
+                    value: testConfigParams
+                },
                 async: true
             };
         },
         binding: function(testConfigParams, element) {
-            element.setAttribute('data-bind', testConfigParams.name + ': value');
+            element.setAttribute('data-bind',
+                '\'' + testConfigParams.name + '\': value');
             return {
                 element: element,
-                value: testConfigParams.value,
+                vm: {
+                    value: testConfigParams.value
+                },
+                async: false
+            };
+        },
+        bindings: function(testConfigParams, element) {
+            var vm = {};
+            var bindings = testConfigParams.map(function(binding, index) {
+                var valueKey = 'value' + index;
+                vm[valueKey] = binding.value;
+                return '\'' + binding.name + '\': ' + valueKey;
+            }).join(', ');
+
+            element.setAttribute('data-bind', bindings);
+            return {
+                element: element,
+                vm: vm,
                 async: false
             };
         }
@@ -83,9 +103,7 @@
                 var element = config.element;
                 dependencies.components.forEach(registerComponent);
                 dependencies.bindingHandlers.forEach(registerBindingHandler);
-                vm = {
-                    value: config.value
-                };
+                vm = config.vm;
                 container = document.createElement('div');
                 container.appendChild(element);
                 document.getElementById(id || 'test').appendChild(container);
@@ -199,6 +217,29 @@
                 };
                 return {
                     test: function(name, callback) {
+                        startTest(id, name, testConfig, dependencies, callback);
+                    }
+                };
+            },
+            bindings: function(html) {
+                var testConfig = {
+                    type: 'bindings',
+                    html: html,
+                    params: []
+                };
+                return {
+                    add: function(name, value) {
+                        assertHasText(name, 'Binding name must be defined');
+                        testConfig.params.push({
+                            name: name,
+                            value: value
+                        });
+                        return this;
+                    },
+                    test: function(name, callback) {
+                        if (testConfig.params.length < 1) {
+                            throw new Error('No element bindings defined');
+                        }
                         startTest(id, name, testConfig, dependencies, callback);
                     }
                 };
