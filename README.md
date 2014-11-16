@@ -8,8 +8,7 @@ Test Knockout 3.2 components and custom binding handlers with ease.
 - [Mocha](http://mochajs.org)
 
 This library supports loading via AMD or as a global object, but mocha always
-needs to in the global scope. AFAIK it has no support for loading via an AMD
-loader. Knockout's alias should be set to `ko`.
+needs to in the global scope. Knockout's alias should be set to `ko`.
 
 In the examples below and in unit tests [expect.js](https://github.com/LearnBoost/expect.js/) and [jQuery](http://jquery.com) are used for brevity.
 
