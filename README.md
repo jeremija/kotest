@@ -133,7 +133,7 @@ npm install -g http-server
 http-server
 ```
 
-And then visit the [http://localhost:8080/test/test.html](http://localhost:8080/test/test.html) page in your browser.
+And then visit the [http://localhost:8080/test/test.html](http://localhost:8080/test/test.html) page in your browser. Note that `npm test` should be performed at least once beforehand because it also downloads and installs all of the necessary dependencies and writes the configuration for tests.
 
 # License
 
