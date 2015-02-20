@@ -33,7 +33,7 @@ LoginComponent.prototype.submit = function() {
 ```
 And the `template` variable containing:
 ```html
-<form data-bind="submit: submit">
+<form data-bind="submit: onSubmit">
     <input name="user" type="text" data-bind="value: username">
     <input name="pass" type="text" data-bind="value: password">
     <input type="submit">
